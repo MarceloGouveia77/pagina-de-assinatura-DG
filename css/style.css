@@ -27,7 +27,7 @@ header{
 
 .logo{
   height: 10rem;
-  width: 10rem;
+  width: 8rem;
   border-radius: 50%;
   background-color: #F7AB29;
   margin: 2rem 0 0 0;
@@ -48,7 +48,6 @@ header{
 .description{
   color: white;
   margin-top: 1rem;
-  font-size: 0.75rem;
   text-align: center;
 }
 
@@ -89,6 +88,7 @@ main{
 
 .btn-principal a{
   text-decoration: none;
+  font-weight: 700;
 }
 
 .btn-principal:hover{
@@ -175,6 +175,7 @@ hr{
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
 }
 
 .twitter{
@@ -184,6 +185,7 @@ hr{
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
 }
 
 .twitch{
@@ -193,6 +195,7 @@ hr{
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
 }
 
 .instagram{
@@ -202,6 +205,7 @@ hr{
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px;
 }
 
 .fab{
