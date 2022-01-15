@@ -212,7 +212,7 @@ hr{
 
 
 footer{
-  margin-top: 2rem;
+  margin: 2rem 0 .5rem 0;
   text-align: center;
   color: #808080;
   display: flex;
