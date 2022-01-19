@@ -21,8 +21,6 @@
       <div class="content" id="content">
 
       </div>
-      <div class="btn-principal"><a href="#" target="_blank">Economizzando</a></div>
-      <div class="btn-principal"><a href="#" target="_blank">Botão para coisa importante 1</a></div>
 
       <!-- <div class="group-whatsapp">
         <a id="hideWpp" href="#hideWpp" class="hide">+ Grupos do Whatsapp</a>
@@ -49,26 +47,18 @@
       <p class="rede-social-description">Fique por dentro de todas as ofertas<br>e muito mais</p>
 
       <div class="rede-social">
-        <div class="facebook">
-          <a href="https://pt-br.facebook.com/descontoemgames" target="_blank">
+          <a href="https://pt-br.facebook.com/descontoemgames" class="facebook" target="_blank">
             <i class="fab fa-facebook-f"></i>
           </a>
-        </div>
-        <div class="twitter">
-          <a href="https://twitter.com/DescontoemGames" target="_blank">
+          <a href="https://twitter.com/DescontoemGames" class="twitter" target="_blank">
             <i class="fab fa-twitter"></i>
           </a>
-        </div>
-        <div class="twitch">
-          <a href="https://www.twitch.tv/descontoemgames" target="_blank">
+          <a href="https://www.twitch.tv/republicadg" class="twitch" target="_blank">
             <i class="fab fa-twitch"></i>
           </a>
-        </div>
-        <div class="instagram">
-          <a href="https://www.instagram.com/descontoemgames" target="_blank">
+          <a href="https://www.instagram.com/descontoemgames" class="instagram" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
-        </div>
       </div>
     </main>
   </div>
@@ -77,6 +67,7 @@
     Copyright 2021 © Todos os direitos reservados a Desconto em Games.
   </footer>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
   <script>
 
     (async () => {
@@ -85,9 +76,15 @@
       }).then(function(response) {
         return response.json();
       }).then(function(data){
-        console.log(data);
+        
+        data.map(link => {
+          $("#content").append(`
+            <div class="btn-principal"><a href="${link.url}" target="_blank">${link.descricao}</a></div>
+          `)
+        })
+
       }).catch(function(err) {
-        alert("Erro ao conectar com a API");
+        console.log("Erro ao conectar com a API");
       })
     })();
   </script>
