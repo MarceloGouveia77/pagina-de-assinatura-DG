@@ -18,10 +18,13 @@
       <div class="fadeBottom"></div>
     </header>
     <main>
+      <div class="content" id="content">
+
+      </div>
       <div class="btn-principal"><a href="#" target="_blank">Economizzando</a></div>
       <div class="btn-principal"><a href="#" target="_blank">Botão para coisa importante 1</a></div>
 
-      <div class="group-whatsapp">
+      <!-- <div class="group-whatsapp">
         <a id="hideWpp" href="#hideWpp" class="hide">+ Grupos do Whatsapp</a>
         <a id="showWpp" href="#showWpp" class="show">- Grupos do Whatsapp</a>
         <div class="details">
@@ -39,7 +42,7 @@
         <div class="details">
           <div class="group"><a href="1" target="_blank">Grupo 1</a></div>
         </div>
-      </div>
+      </div> -->
       <hr>
 
       <h1 class="rede-social-title">Siga-nos nas<br>Redes Sociais</h1>
@@ -73,5 +76,20 @@
     <hr>
     Copyright 2021 © Todos os direitos reservados a Desconto em Games.
   </footer>
+
+  <script>
+
+    (async () => {
+      await fetch('https://pudim2.economizzando.com.br/app/api/landingpages/links/1/', {
+        method: 'GET'
+      }).then(function(response) {
+        return response.json();
+      }).then(function(data){
+        console.log(data);
+      }).catch(function(err) {
+        alert("Erro ao conectar com a API");
+      })
+    })();
+  </script>
 </body>
 </html>
